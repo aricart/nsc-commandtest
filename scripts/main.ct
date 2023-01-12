@@ -1,0 +1,24 @@
+# Testing nsc
+
+# help
+$ mkdir testdata
+$ mkdir testconfig
+$ mkdir keys
+$ setenv NKEYS_PATH keys
+$ echo ${ROOTDIR}
+${ROOTDIR}
+
+
+
+$ nsc --config-dir ./testconfig --data-dir ./testdata add operator O
+$ nsc --config-dir ./testconfig --data-dir ./testdata add account A
+$ nsc --config-dir ./testconfig --data-dir ./testdata add user U
+[ OK ] generated and stored operator key "OA52C5U7EOE6UV6NWHB7HSA5SIGZFSGW2P4MLFST5NKU2JNOGNARSKVQ"
+[ OK ] added operator "O"
+[ OK ] When running your own nats-server, make sure they run at least version 2.2.0
+[ OK ] generated and stored account key "ACMWL3JJTWLFLAUMFOQ5QKQLUIKLHGL4LKBL4T3POS2IZ3O5RJPO3MUK"
+[ OK ] added account "A"
+[ OK ] generated and stored user key "UB7TM57IIJ3PHPGKH2AIXG65ZCVTTFVDQH77OPUMWNM5ENOGPMZXHC6W"
+[ OK ] generated user creds file `/private${ROOTDIR}/keys/creds/O/A/U.creds`
+[ OK ] added user "U" to account "A"
+
